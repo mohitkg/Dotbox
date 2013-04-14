@@ -1,0 +1,1000 @@
+  995  make -f Makefile-3
+  996  make -f Makefile-2
+  997  touch *.*
+  998  make -f Makefile-2
+  999  touch *.*
+ 1000  make -f Makefile-4
+ 1001  cat Makefile-2
+ 1002  ls
+ 1003  cd actual/
+ 1004  ls
+ 1005  cd make_assign/
+ 1006  ls
+ 1007  ls src2
+ 1008  cd ..
+ 1009  cd make_assign/
+ 1010  ls
+ 1011  cd src1
+ 1012  ls
+ 1013  make
+ 1014  su
+ 1015  cd
+ 1016  cd newdir/
+ 1017  ls
+ 1018  cd spoj
+ 1019  ls
+ 1020  cd make_assign/
+ 1021  make
+ 1022  touch *.*
+ 1023  make
+ 1024  touch *
+ 1025  make
+ 1026  ./calc
+ 1027  cd make_assign/
+ 1028  ls
+ 1029  mv makefile Makefile
+ 1030  ls
+ 1031  rm makefile~ 
+ 1032  ls
+ 1033  vim Makefile 
+ 1034  ls
+ 1035  cd src1
+ 1036  ls
+ 1037  rm Makefile1 
+ 1038  make
+ 1039  cd ..
+ 1040  cd src2
+ 1041  ls
+ 1042  make
+ 1043  touch *
+ 1044  make
+ 1045  touch *.*
+ 1046  make
+ 1047  touch mulc
+ 1048  touch mul.c
+ 1049  make
+ 1050  cd ..
+ 1051  ls
+ 1052  make
+ 1053  cd src1
+ 1054  ls
+ 1055  make
+ 1056  touch *.*
+ 1057  make
+ 1058  touch *
+ 1059  make
+ 1060  ls
+ 1061  cd ..
+ 1062  ls
+ 1063  make
+ 1064  touch calc.c
+ 1065  make
+ 1066  make clean
+ 1067  make
+ 1068  make clean
+ 1069  make
+ 1070  cd src1
+ 1071  ls
+ 1072  make
+ 1073  touch add.o
+ 1074  make
+ 1075  touch add.c
+ 1076  make
+ 1077  cd ..
+ 1078  make
+ 1079  touch src1/add.o
+ 1080  make
+ 1081  touch src1/add.c
+ 1082  make
+ 1083  touch calc.o
+ 1084  ls
+ 1085  make
+ 1086  touch calc.o
+ 1087  make
+ 1088  make clean
+ 1089  make
+ 1090  make backup
+ 1091  cd
+ 1092  mkdir destination
+ 1093  cd newdir/spoj/make_assign/
+ 1094  make backup
+ 1095  ls ~/destination/
+ 1096  ls ~/destination/src1
+ 1097  ls ~/destination/src2
+ 1098  make clean
+ 1099  ls
+ 1100  make clean
+ 1101  make
+ 1102  exit
+ 1103  cd
+ 1104  cd newdir/spoj/
+ 1105  vim file.c
+ 1106  exit
+ 1107  gcc -g file.c 
+ 1108  gdb ./a.out
+ 1109  gcc -g file.c 
+ 1110  gdb ./a.out
+ 1111  exit
+ 1112  cd
+ 1113  ls
+ 1114  cd gdbprac/
+ 1115  ls
+ 1116  cat try.c
+ 1117  cat try2.c
+ 1118  cat try3.c
+ 1119  g++ -g try3.c
+ 1120  gdb ./a.out
+ 1121  exit
+ 1122  cd ..
+ 1123  ls
+ 1124  cd actual
+ 1125  ls
+ 1126  cd make_assign/
+ 1127  ls
+ 1128  cd src1
+ 1129  ls
+ 1130  vim Makefile
+ 1131  make
+ 1132  vim Makefile
+ 1133  gedit Makefile 
+ 1134  exit
+ 1135  su
+ 1136  exit
+ 1137  cd pythonassgn/
+ 1138  ls
+ 1139  vim w.py
+ 1140  mv w.py pyassgn.py
+ 1141  vim pyassgn.py 
+ 1142  ls
+ 1143  mv input inputfile
+ 1144  ls
+ 1145  chmod +x pyassgn.py 
+ 1146  ./pyassgn.py 
+ 1147  vim pyassgn.py 
+ 1148  python pyassgn.py 
+ 1149  python pyassgn.py inputfile 
+ 1150  vim pyassgn.py 
+ 1151  vim inputfile 
+ 1152  python pyassgn.py /bin/ inputfile
+ 1153  python pyassgn.py / inputfile
+ 1154  vim pyassgn.py 
+ 1155  python pyassgn.py ~/pythonassgn/ inputfile
+ 1156  python pyassgn.py ~/flexbison/ inputfile
+ 1157  python pyassgn.py ~/ inputfile
+ 1158  python pyassgn.py ~/gdbprac inputfile
+ 1159  python pyassgn.py ~/ inputfile
+ 1160  python pyassgn.py ~/gdbprac inputfile
+ 1161  python pyassgn.py ~/ inputfile
+ 1162  mv pyassgn.py ../dirtest/pyassgn.py
+ 1163  cd ../dirtest/
+ 1164  ls
+ 1165  python pyassgn.py ~/dirtest/ search_file 
+ 1166  cd ../dirtest2
+ 1167  ls
+ 1168  python pyassgn.py ~/dirtest2/ search_file 
+ 1169  python pyassgn.py ~/dirtest2/ search_file_py
+ 1170  python pyassgn.py ~/dirtest2/ search_file_shell 
+ 1171  python pyassgn.py ~/dirtest2/ search_file_py 
+ 1172  python pyassgn.py ~/dirtest2/ search_file_shell 
+ 1173  python pyassgn.py ~/dirtest2/ search_file_py 
+ 1174  python pyassgn.py ~/dirtest2/ search_file_shell 
+ 1175  touch a.tar.gz a2.tar.gz a3.tar.fd
+ 1176  su
+ 1177  cd assembly/
+ 1178  ls
+ 1179  gcc pascal.c 
+ 1180  ./a.out
+ 1181  cd 
+ 1182  cd assembly/
+ 1183  ls
+ 1184  gcc pascal2.c 
+ 1185  ./a.out
+ 1186  gcc -S pascal2.c -o pascal.s
+ 1187  ./a.out
+ 1188  vim pascal.s
+ 1189  ./a.out
+ 1190  gcc pascal2.c
+ 1191  ./a.out
+ 1192  gcc pascal2.c
+ 1193  ./a.out
+ 1194  cd 
+ 1195  cd assembly/
+ 1196  vim tryn2.c
+ 1197  gcc -S tryn2.c -o tryn2.s
+ 1198  ls
+ 1199  vim tryn2.s
+ 1200  vim new.c
+ 1201  vim tryn.c
+ 1202  gcc tryn.c 
+ 1203  vim tryn.c
+ 1204  gcc tryn.c 
+ 1205  vim tryn.c
+ 1206  gcc tryn.c 
+ 1207  ./.out
+ 1208  ./a.out
+ 1209  vim tryn.c
+ 1210  ./.out
+ 1211  gcc tryn.c 
+ 1212  ./a.out
+ 1213  vim tryn.c
+ 1214  gcc tryn.c 
+ 1215  ./a.out
+ 1216  vim tryn.c
+ 1217  gcc tryn.c 
+ 1218  ./a.out
+ 1219  vim tryn.c
+ 1220  gcc tryn.c 
+ 1221  vim tryn.c
+ 1222  su
+ 1223  cd newdir/spoj/
+ 1224  ls
+ 1225  g++ FENCE1spoj.cpp 
+ 1226  ./a.out
+ 1227  g++ FENCE1spoj.cpp 
+ 1228  ./a.out
+ 1229  g++ FENCE1spoj.cpp 
+ 1230  ./a.out
+ 1231  g++ -S FENCE1spoj.cpp -o new.s
+ 1232  cat new.s
+ 1233  gedit new.s
+ 1234  clear
+ 1235  ./a.out
+ 1236  find include
+ 1237  find bison
+ 1238  cd
+ 1239  find bison
+ 1240  man find
+ 1241  clear
+ 1242  su
+ 1243  cd newdir/spoj/
+ 1244  g++ BUGLIFEspoj.cpp 
+ 1245  ./a.out
+ 1246  g++ BUGLIFEspoj.cpp 
+ 1247  ./a.out
+ 1248  g++ BUGLIFEspoj.cpp 
+ 1249  ./a.out
+ 1250  g++ ARRANGEspoj.cpp 
+ 1251  ./a.out
+ 1252  g++ ARRANGEspoj.cpp 
+ 1253  ./a.out
+ 1254  g++ ARRANGEspoj.cpp 
+ 1255  ./a.out
+ 1256  g++ ARRANGEspoj.cpp 
+ 1257  ./a.out
+ 1258  g++ ARRANGEspoj.cpp 
+ 1259  ./a.out
+ 1260  g++ ARRANGEspoj.cpp 
+ 1261  ./a.out
+ 1262  g++ ARRANGEspoj.cpp 
+ 1263  ./a.out
+ 1264  g++ ARRANGEspoj.cpp 
+ 1265  ./a.out
+ 1266  g++ ARRANGEspoj.cpp 
+ 1267  ./a.out
+ 1268  g++ ARRANGEspoj.cpp 
+ 1269  ./a.out
+ 1270  vim newin.txt
+ 1271  touch newout.txt
+ 1272  ./a.out<newin.txt > newout.txt 
+ 1273  cat newout.txt 
+ 1274  ./a.out<newin.txt > newout.txt 
+ 1275  g++ ARRANGEspoj.cpp 
+ 1276  ./a.out<newin.txt > newout.txt 
+ 1277  cat newout.txt 
+ 1278  ./a.out
+ 1279  g++ COINSspoj.cpp 
+ 1280  ./a.out
+ 1281  g++ -g COINSspoj.cpp 
+ 1282  gdb ./a.out
+ 1283  g++ -g COINSspoj.cpp 
+ 1284  ./a.out
+ 1285  g++ -g COINSspoj.cpp 
+ 1286  ./a.out
+ 1287  exit
+ 1288  git
+ 1289  git clone https://github.com/pyjs/pyjs.git
+ 1290  ls
+ 1291  cd pyjs
+ 1292  ls
+ 1293  git st
+ 1294  git status
+ 1295  git
+ 1296  python bootstrap.py 
+ 1297  su
+ 1298  ls
+ 1299  cd examples/
+ 1300  ls
+ 1301  python .
+ 1302  cd __output__/
+ 1303  ls
+ 1304  ls | less
+ 1305  exit
+ 1306  history | tail -1
+ 1307  history | tail -15
+ 1308  history | tail -30
+ 1309  ping google.com
+ 1310  exit
+ 1311  cd pyjs
+ 1312  ls
+ 1313  su
+ 1314  python ../../bin/pyjsbuild Hello.py
+ 1315  python /bin/pyjsbuild Hello.py
+ 1316  exit
+ 1317  apache
+ 1318  apache2
+ 1319  sudo apt-get update
+ 1320  sudo apt-get install apache2
+ 1321  sudo apt-get update
+ 1322  sudo apt-get upgrade
+ 1323  cd pyjs/examples/
+ 1324  ls
+ 1325  locate buildall.py
+ 1326  find buildall.py
+ 1327  find buildall
+ 1328  find onclicktest
+ 1329  find onclicktes
+ 1330  find buildall.py
+ 1331  sudo easy_install dotbox
+ 1332  ping google.com
+ 1333  su
+ 1334  cd newdir
+ 1335  cat test.txt | tail -2
+ 1336  sudo apt-get install pygame
+ 1337  su
+ 1338  ls
+ 1339  cd
+ 1340  ls
+ 1341  cd pygame
+ 1342  ls
+ 1343  ls -a
+ 1344  ls
+ 1345  cat readme.rst 
+ 1346  ls
+ 1347  cat install.txt 
+ 1348  ls
+ 1349  python setup/py build
+ 1350  python setup.py build
+ 1351  ls
+ 1352  cd ..
+ 1353  ls
+ 1354  cd pygame
+ 1355  ls
+ 1356  cat setup.py 
+ 1357  ls
+ 1358  vim install.
+ 1359  ls
+ 1360  vim install.txt 
+ 1361  python setup.py help
+ 1362  ls
+ 1363  python setup.py install
+ 1364  sudo setup.py build
+ 1365  ls
+ 1366  cd drc
+ 1367  cd src
+ 1368  ls
+ 1369  cd ..
+ 1370  ls
+ 1371  sudo setup.py build
+ 1372  sudo python setup.py build
+ 1373  sdl
+ 1374  sudo apt-get install libsdl1.2-dev libsdl1.2debian
+ 1375  sudo python setup.py build
+ 1376  sudo python setup.py install
+ 1377  ls
+ 1378  cd examples/
+ 1379  ls
+ 1380  exit
+ 1381  ls
+ 1382  ls | grep tar
+ 1383  cd ../dotbox/
+ 1384  ls
+ 1385  python setup.py install
+ 1386  cd dotbox-0.1.0/
+ 1387  python setup.py install
+ 1388  su
+ 1389  ls
+ 1390  cd examples/
+ 1391  ls
+ 1392  gedit dotbox-simple-text.py 
+ 1393  python dotbox-simple-text.py 
+ 1394  pygame
+ 1395  sudo apt-get install pygame
+ 1396  cd ..
+ 1397  ls
+ 1398  python dotbox.py
+ 1399  python pygame
+ 1400  cd
+ 1401  git clone https://bitbucket.org/pygame/pygame
+ 1402  hg clone https://bitbucket.org/pygame/pygame
+ 1403  sudo apt-get install mercurial
+ 1404  hg clone https://bitbucket.org/pygame/pygame
+ 1405  exit
+ 1406  ls
+ 1407  cd pyjs
+ 1408  python examples/
+ 1409  su
+ 1410  sudo mount -t vboxsf tst newdir
+ 1411  cd
+ 1412  ls
+ 1413  sudo mount -t vboxsf tst newdir
+ 1414  su
+ 1415  python tk.py
+ 1416  sudo apt-get install python-tk
+ 1417  git clone git://anongit.kde.org/ksquares
+ 1418  git clone http://anongit.kde.org/ksquares
+ 1419  ls
+ 1420  cd ksquares/
+ 1421  ls
+ 1422  cd src
+ 1423  ls
+ 1424  gedit ../CMakeLists.txt 
+ 1425  cd
+ 1426  mkdir gitpro
+ 1427  cd gitpro
+ 1428  ls
+ 1429  git init
+ 1430  mkdir hello
+ 1431  cd hello
+ 1432  git clone https://github.com/adhruv/Pro252.git
+ 1433  git clone http://github.com/adhruv/Pro252.git
+ 1434  ls
+ 1435  cd Pro252/
+ 1436  ls
+ 1437  touch werw.we
+ 1438  git add .
+ 1439  ls
+ 1440  git status
+ 1441  git commit -m "first remote commit"
+ 1442  git status
+ 1443  git push https://github.com/adhruv/Pro252.git master
+ 1444  git push http://github.com/adhruv/Pro252.git master
+ 1445  git status
+ 1446  git config --global user.name "Dhruv Anand"
+ 1447  git config --global user.email adhruv@iitk.ac.in
+ 1448  touch werw.we2
+ 1449  git add .
+ 1450  git commit -m "second remote commit"
+ 1451  git push http://github.com/adhruv/Pro252.git master
+ 1452  cd ~/.ssh
+ 1453  ls
+ 1454  ssh-keygen -t rsa -C "adhruv@iitk.ac.in"
+ 1455  sudo apt-get install xclip
+ 1456  xclip -sel clip < ~/.ssh/id_rsa.pub
+ 1457  cd 
+ 1458  ls -r
+ 1459  ls -d
+ 1460  ls -D
+ 1461  ls 
+ 1462  cd gitpro
+ 1463  ls
+ 1464  cd hello
+ 1465  ls
+ 1466  cd Pro252/
+ 1467  ls
+ 1468  cd ..
+ 1469  ls
+ 1470  git
+ 1471  git status
+ 1472  cd Pro252/
+ 1473  git status
+ 1474  ssh -T git@github.com
+ 1475  cd ..
+ 1476  ssh -T git@github.com
+ 1477  ping google.com
+ 1478  git
+ 1479  ssh -T git@github.com
+ 1480  git checkout master
+ 1481  ls
+ 1482  cd Pro252/
+ 1483  ls
+ 1484  ls -a
+ 1485  git checkout master
+ 1486  git push master
+ 1487  git remote add http://github.com/adhruv/Pro252.git ../hello.git
+ 1488  git remote add https://github.com/adhruv/Pro252.git ../hello.git
+ 1489  git remote add shared ../hello.git
+ 1490  ls
+ 1491  ls ..
+ 1492  ls -a ..
+ 1493  git checkout master
+ 1494  git push master
+ 1495  ls
+ 1496  gedit source.py
+ 1497  ssh
+ 1498  ssh git@github.com
+ 1499  ssh -vT git@github.com
+ 1500  ssh-add -l
+ 1501  apache
+ 1502  apache2
+ 1503  python ../../bin/pyjsbuild Hello.py
+ 1504  cd pyjs
+ 1505  ls
+ 1506  cd examples/
+ 1507  ls
+ 1508  cd helloworld
+ 1509  ls
+ 1510  python ../../bin/pyjsbuild Hello.py
+ 1511  python ../../bin/pyjsbuild minesweeper.py
+ 1512  cd ..
+ 1513  cd minesweeper/
+ 1514  python ../../bin/pyjsbuild minesweeper.py
+ 1515  cd ..
+ 1516  cd testproject
+ 1517  ls
+ 1518  gedit minesweeper.py 
+ 1519  python ../../bin/pyjsbuild minesweeper.py
+ 1520  gedit minesweeper.py 
+ 1521  python ../../bin/pyjsbuild minesweeper.py
+ 1522  cd
+ 1523  ls
+ 1524  cd pyjs
+ 1525  ls
+ 1526  cd pyjs
+ 1527  ls
+ 1528  cd ..
+ 1529  ls
+ 1530  cd examples
+ 1531  ls
+ 1532  cd helloworld
+ 1533  ls
+ 1534  vim __main__.py 
+ 1535  cd ..
+ 1536  ls
+ 1537  cd cssmesser/
+ 1538  python ../../bin/pyjsbuild cssmesser.py
+ 1539  ls
+ 1540  cd output
+ 1541  ls
+ 1542  cd ..
+ 1543  ls
+ 1544  python ../../bin/pyjsbuild CSSMess.py
+ 1545  cd ..
+ 1546  ls
+ 1547  cd cssmesser/
+ 1548  ls
+ 1549  gedit CSSMess.py 
+ 1550  gedit __main__.py 
+ 1551  exit
+ 1552  sudo add-apt-repository ppa:chris-lea/node.js
+ 1553  sudo apt-get install python-software-properties
+ 1554  sudo add-apt-repository ppa:chris-lea/node.js
+ 1555  sudo apt-get update
+ 1556  sudo apt-get install nodejs
+ 1557  node
+ 1558  man node
+ 1559  exit
+ 1560  mkdir chat
+ 1561  cd chat
+ 1562  sudo apt-get install npm 
+ 1563  gedit package.json
+ 1564  npm install -d
+ 1565  gedit app.js
+ 1566  gedit index.html
+ 1567  node app.js
+ 1568  git clone https://github.com/mmukhin/psitsmike_example_1.git
+ 1569  git clone http://github.com/mmukhin/psitsmike_example_1.git
+ 1570  git clone git://github.com/mmukhin/psitsmike_example_1.git
+ 1571  git clone https://github.com/mmukhin/psitsmike_example_1.git
+ 1572  cd psitsmike_example_1/
+ 1573  ls
+ 1574  node app.js
+ 1575  npm install -g express
+ 1576  node app.js
+ 1577  curl http://npmjs.org/install.sh | sudo sh
+ 1578  curl http://npmjs.org/install.sh
+ 1579  sudo sh
+ 1580  curl http://npmjs.org/install.sh | sudo sh
+ 1581  sudo npm install socket.io
+ 1582  cd
+ 1583  cd
+ 1584  python noproxy.py
+ 1585  ls
+ 1586  gedit noprox.py
+ 1587  python noprox.py
+ 1588  exit
+ 1589  cd cs252proj/
+ 1590  ls
+ 1591  node test.js
+ 1592  cd
+ 1593  cd cs252proj/
+ 1594  mkdir chatex
+ 1595  cd chatex
+ 1596  git clone git://github.com/jslatts/nodechat-tutorial.git
+ 1597  cd ..
+ 1598  mkdir chatex2
+ 1599  cd chatex2
+ 1600  ls
+ 1601  git clone git://github.com/mmukhin/psitsmike_example_1.git
+ 1602  python ~/noprox.py 
+ 1603  cd ../chatex
+ 1604  ls
+ 1605  cd nodechat-tutorial/
+ 1606  ls
+ 1607  node core.js
+ 1608  ls
+ 1609  cd controllers/
+ 1610  ls
+ 1611  node controllers.js 
+ 1612  cd ..
+ 1613  ls
+ 1614  cd models/
+ 1615  ls
+ 1616  node models.js 
+ 1617  cd ..
+ 1618  ls
+ 1619  cat README 
+ 1620  ls
+ 1621  node nodechat-tutorial.html 
+ 1622  ls
+ 1623  locate nodechat.js
+ 1624  cd node_modules/
+ 1625  ls
+ 1626  cd ..
+ 1627  ls
+ 1628  node core.js
+ 1629  redis-server
+ 1630  sudo apt-get install redis-server
+ 1631  node core.js
+ 1632  ls
+ 1633  node core.js
+ 1634  ls
+ 1635  pwd
+ 1636  cd ../../chatex2/
+ 1637  l
+ 1638  ls
+ 1639  cd psitsmike_example_1/
+ 1640  ls
+ 1641  node app.js
+ 1642  npm install -d
+ 1643  node app.js
+ 1644  ls
+ 1645  vim index.html 
+ 1646  vim app.js
+ 1647  ls
+ 1648  vim package.json 
+ 1649  cd
+ 1650  ls | grep nopr
+ 1651  cd cs252proj/
+ 1652  ls
+ 1653  cd chatex2
+ 1654  ls
+ 1655  cd psitsmike_example_1/
+ 1656  ls
+ 1657  gedit app.js
+ 1658  node app.js
+ 1659  ls
+ 1660  node app.js
+ 1661  ls
+ 1662  rm app.js~ 
+ 1663  rm index.html~ 
+ 1664  ls
+ 1665  node app.js 
+ 1666  npm install -d
+ 1667  node app.js 
+ 1668  cd ..
+ 1669  ls
+ 1670  cp -r psitsmike_example_1/ newps
+ 1671  ls
+ 1672  cd newps/
+ 1673  ls
+ 1674  node app.js 
+ 1675  cd ..
+ 1676  mkdir newps2
+ 1677  ls
+ 1678  cd newps2
+ 1679  ls
+ 1680  git clone git://github.com/mmukhin/psitsmike_example_1.git
+ 1681  ls
+ 1682  ping google.com
+ 1683  ls
+ 1684  git clone https://github.com/mmukhin/psitsmike_example_1.git
+ 1685  ls
+ 1686  cd psitsmike_example_1-master/
+ 1687  ls
+ 1688  node app.js
+ 1689  npm install -d
+ 1690  node app.js
+ 1691  npm install -d
+ 1692  ls
+ 1693  node app.js
+ 1694  exit
+ 1695  cd cs252proj/chatex2/newps
+ 1696  ls
+ 1697  rm *
+ 1698  ls
+ 1699  rm -r *
+ 1700  ls
+ 1701  git clone git://github.com/philmunt/philmunt.com-tutorials.git
+ 1702  ls
+ 1703  cd philmunt.com-tutorials/
+ 1704  ls
+ 1705  cat README 
+ 1706  cd nhsg/
+ 1707  ls
+ 1708  cd part
+ 1709  cd part2
+ 1710  ls
+ 1711  node server.js
+ 1712  ls
+ 1713  cd ..
+ 1714  ls
+ 1715  cd part
+ 1716  cd part3
+ 1717  ls
+ 1718  node server.js 
+ 1719  npm install -d
+ 1720  npm install express
+ 1721  ls
+ 1722  node server.js 
+ 1723  exit
+ 1724  cd ..
+ 1725  ld
+ 1726  ls
+ 1727  cd newps2
+ 1728  ls
+ 1729  cd psitsmike_example_1-master/
+ 1730  ls
+ 1731  npm install -d
+ 1732  node app.js
+ 1733  ls
+ 1734  cd ..
+ 1735  ls
+ 1736  cd psitsmike_example_1/
+ 1737  ls
+ 1738  exit
+ 1739  ping http://google.com
+ 1740  ping www.google.com
+ 1741  ls
+ 1742  node app.js 
+ 1743  exit
+ 1744  node app.js
+ 1745  exit
+ 1746  ls
+ 1747  cd cs252proj/
+ 1748  ls
+ 1749  cd chatex2
+ 1750  ls
+ 1751  cd psitsmike_example_1/
+ 1752  ls
+ 1753  gedit app.js index.html
+ 1754  exit
+ 1755  ls
+ 1756  cd philmunt.com-tutorials/
+ 1757  ls
+ 1758  cd ../..
+ 1759  ls
+ 1760  cd psitsmike_example_1/
+ 1761  ls
+ 1762  node app.js
+ 1763  exit
+ 1764  exit
+ 1765  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1766  ls
+ 1767  node app.js
+ 1768  cd ../psitsmike_example_1/
+ 1769  ls
+ 1770  node app.js
+ 1771  cd ../p
+ 1772  cd ..
+ 1773  ls
+ 1774  cd dhruv_example_1\ \(copy\)/
+ 1775  ls
+ 1776  node app.js
+ 1777  netstat -a -v
+ 1778  netstat -aux
+ 1779  ps -aux
+ 1780  ps ax
+ 1781  node app.js
+ 1782  npm install -d
+ 1783  node app.js
+ 1784  ifconfig
+ 1785  sudo apt-get update
+ 1786  exit
+ 1787  cd
+ 1788  python noprox.py 
+ 1789  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1790  ls
+ 1791  node app.js
+ 1792  netstat -a -v
+ 1793  netstat -aux
+ 1794  netstat --listen
+ 1795  sudo service apache2 restart
+ 1796  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1797  ls
+ 1798  node app.js
+ 1799  top
+ 1800  node app.js
+ 1801  top
+ 1802  tomcat
+ 1803  netstat -av
+ 1804  node app.js
+ 1805  exit
+ 1806  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1807  ls
+ 1808  node app.js
+ 1809  exit
+ 1810  node app.js
+ 1811  exit
+ 1812  node app.js
+ 1813  exit
+ 1814  node app.js
+ 1815  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1816  ls
+ 1817  node app.js
+ 1818  sudo node app.js
+ 1819  node mukhin_chat
+ 1820  node app
+ 1821  exit
+ 1822  node app
+ 1823  exit
+ 1824  node app
+ 1825  exit
+ 1826  cd
+ 1827  sudo mount -t vboxsf tst newdir
+ 1828  cd newdir/
+ 1829  ls
+ 1830  sudo nautilus
+ 1831  cd
+ 1832  sudo cp -r dhruv_example_1\ \(copy\)/ newdir/
+ 1833  cd cs252proj/
+ 1834  ls
+ 1835  cd chatex2
+ 1836  ls
+ 1837  cd dhruv_example_1\ \(copy\)/
+ 1838  ls
+ 1839  node app
+ 1840  node app.js
+ 1841  exit
+ 1842  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1843  ls
+ 1844  node app.js
+ 1845  node app
+ 1846  cd
+ 1847  ls
+ 1848  cd dhruv_example_1\ \(copy\)/
+ 1849  ls
+ 1850  node app
+ 1851  cd ..
+ 1852  ls
+ 1853  cd cs252proj/
+ 1854  ls
+ 1855  cd chatex2
+ 1856  ls
+ 1857  cd dhruv_example_1\ \(copy\)/
+ 1858  ls
+ 1859  node app.js
+ 1860  exit
+ 1861  cd cs252proj/
+ 1862  ls
+ 1863  cd chatex2
+ 1864  ls
+ 1865  cd dhruv_example_1\ \(copy\)/
+ 1866  ls
+ 1867  node app.js
+ 1868  cd 
+ 1869  cd newdir
+ 1870  ls
+ 1871  cd dhruv_example_1\ \(copy\)/
+ 1872  ls
+ 1873  node app
+ 1874  cd
+ 1875  exit
+ 1876  cd newdir/
+ 1877  ls
+ 1878  cd dhruv_example_1\ \(copy\)/
+ 1879  ls
+ 1880  node app.js
+ 1881  cd ..
+ 1882  cd cs252proj/
+ 1883  ls
+ 1884  cd chatex2
+ 1885  ls
+ 1886  cd mohti
+ 1887  cd mohit
+ 1888  ls
+ 1889  node app.js
+ 1890  exit
+ 1891  cd cs252proj/
+ 1892  ls
+ 1893  cd chatex2
+ 1894  ls
+ 1895  cd mohit
+ 1896  ls
+ 1897  node app.js
+ 1898  exit
+ 1899  python noprox.py 
+ 1900  exit
+ 1901  cd
+ 1902  python noprox.py 
+ 1903  node app.js
+ 1904  ls
+ 1905  redis-server
+ 1906  npm install -g express
+ 1907  sudo npm install -g express
+ 1908  cd
+ 1909  ls
+ 1910  cd cs252proj/
+ 1911  ls
+ 1912  cd chatex2/
+ 1913  ls
+ 1914  cd dhruv_example_1\ \(copy\)/
+ 1915  ls
+ 1916  node app
+ 1917  exit
+ 1918  cd cs252proj/chatex2/dhruv_example_1\ \(copy\)/
+ 1919  ls
+ 1920  cd ..
+ 1921  ls
+ 1922  git clone git://github.com/visionmedia/express.git
+ 1923  git clone https://github.com/visionmedia/express.git
+ 1924  ls
+ 1925  cd mohit
+ 1926  ls
+ 1927  cd ..
+ 1928  ls
+ 1929  cd express/
+ 1930  ls
+ 1931  cd examples/
+ 1932  ls
+ 1933  cd auth
+ 1934  ls
+ 1935  node app
+ 1936  npm install
+ 1937  ls
+ 1938  ls -a
+ 1939  cd ..
+ 1940  ls
+ 1941  ls -a
+ 1942  cd auth
+ 1943  ls
+ 1944  cat npm-debug.log
+ 1945  :wq
+ 1946  ls
+ 1947  cd ..
+ 1948  node app
+ 1949  node auth
+ 1950  ls
+ 1951  cd ..
+ 1952  ls
+ 1953  pwd
+ 1954  npm install
+ 1955  make test
+ 1956  ls
+ 1957  cd examples
+ 1958  make test
+ 1959  ls
+ 1960  cd ..
+ 1961  ls
+ 1962  cat Makefile 
+ 1963  ls
+ 1964  cd ..
+ 1965  ls
+ 1966  git clone git://github.com/braitsch/node-login.git node-login
+ 1967  git clone git://github.com/braitsch/node-login.git
+ 1968  ping google.com
+ 1969  ls
+ 1970  cd express/examples/
+ 1971  ls
+ 1972  cd auth
+ 1973  node app.js
+ 1974  npm install
+ 1975  node app
+ 1976  ls
+ 1977  node app
+ 1978  cd 
+ 1979  cd cs252proj/chatex2
+ 1980  ls
+ 1981  cd moht
+ 1982  cd mohit
+ 1983  ls
+ 1984  node app
+ 1985  exit
+ 1986  cd cs252proj/chatex2/mohit/
+ 1987  ls
+ 1988  node app
+ 1989  exit
+ 1990  history |less
+ 1991  history |head --1
+ 1992  history |head 1
+ 1993  history |head 
+ 1994  history>hist.txt

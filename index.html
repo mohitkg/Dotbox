@@ -1,53 +1,117 @@
-<script src="/socket.io/socket.io.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script>
-  var socket = io.connect('http://localhost:8080');
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script src="/socket.io/socket.io.js"></script> 
+<script src="jquery.min.js"></script>
+<script type="text/javascript" src="nodesocket.js"></script>
+<script type="text/javascript" src="myfile.js"></script>
 
-  // on connection to server, ask for user's name with an anonymous callback
-  socket.on('connect', function(){
-    // call the server-side function 'adduser' and send one parameter (value of prompt)
-    socket.emit('adduser', prompt("What's your name?"));
-  });
+<body>
+<CENTER>
+<script LANGUAGE="JavaScript">
 
-  // listener, whenever the server emits 'updatechat', this updates the chat body
-  socket.on('updatechat', function (username, data) {
-    $('#conversation').append('<b>'+username + ':</b> ' + data + '<br>');
-  });
+//Global variables for rows, columns and players.
+var m;
+var n;
+var p;
 
-  // listener, whenever the server emits 'updateusers', this updates the username list
-  socket.on('updateusers', function(data) {
-    $('#users').empty();
-    $.each(data, function(key, value) {
-      $('#users').append('<div>' + key + '</div>');
-    });
-  });
+//Making objects for the images to be included.
+n0 = new Image();
+n1 = new Image();
+n2 = new Image();
+n3 = new Image();
+n4 = new Image();
+n5 = new Image();
 
-  // on load of page
-  $(function(){
-    // when the client clicks SEND
-    $('#datasend').click( function() {
-      var message = $('#data').val();
-      $('#data').val('');
-      // tell server to execute 'sendchat' and send along one parameter
-      socket.emit('sendchat', message);
-    });
+//Setting the objects source to the image files.
+n0.src = "red.gif";//first player is red.
+n1.src = "blue.gif";//second player is blue.
+n4.src = "green.gif";//third player is green.
+n5.src = "yellow.gif";//fourth player is yellow.
 
-    // when the client hits ENTER on their keyboard
-    $('#data').keypress(function(e) {
-      if(e.which == 13) {
-        $(this).blur();
-        $('#datasend').focus().click();
-      }
-    });
-  });
+n2.src = "black.gif";//color for completed edges is black.
+n3.src = "blank.gif";//blank image for incomplete square.
 
+var flag = [n0.src,n1.src,n4.src,n5.src];
+var player=0;
+var score=[0,0,0,0];
+var horiedge=[];
+var vertiedge=[];
+var box=[];
+var nn,x,y,zz,count,loop,u,v;
+
+//Function to make the HTML table tags and include the images as the sources of the row elements.
+function draw(m_client, n_client, p_client){
+	m = m_client;
+	n = n_client;
+	p = p_client;
+	//Initialization of the arrays which store the state of the edges and boxes.
+	for (var i=0;i<=m;i++) {
+		horiedge[i]=[];
+		for (var j=0;j<n;j++) horiedge[i][j]=0;
+	}
+	for (i=0;i<m;i++) {
+		vertiedge[i]=[];
+		for (j=0;j<=n;j++) vertiedge[i][j]=0;
+	}
+	for (i=0;i<m;i++) {
+		box[i]=[];
+		for (j=0;j<n;j++) box[i][j]=0;
+	}
+	nn=2*n+1;
+	
+	//We use DOM manipulation to change the innerHTML matter of a div specially created for the table.
+	//Starting the form and table tag.
+	document.getElementById("tableid").innerHTML='<form name="f"><table bgcolor=#ffffff border="0" cellpadding="0" cellspacing="0"><tr>';
+	for (i=0;i<m;i++) {
+		for (j=0;j<n;j++) {
+			//Making each row of alternating dots and horizontal edges.
+			document.getElementById("tableid").innerHTML+=('<td align=center><img src="black.gif" border=0 width=5 height=5></td><td align=center><a href="javascript:if(horiedge['+i+']['+j+']<1) reqhorimove('+i+','+j+','+player_number+')"'+' onMouseover="javascript:if (horiedge['+i+']['+j+']<1) document.he'+i+j+'.src=flag[player_number]"'
+			+' onMouseout="javascript:if (horiedge['+i+']['+j+']<1) document.he'+i+j+'.src=n3.src">'
+			+'<img src="blank.gif" name="he'+i+j+'" border=0 width=55 height=5></a></td>');
+		}
+
+		document.getElementById("tableid").innerHTML+='<td align=center><img src="black.gif" width=5 height=5></td>';
+		document.getElementById("tableid").innerHTML+='</tr><br><tr>';
+		
+		for (j=0;j<n;j++) {
+			//Making each row of alternating vertical edges and blank boxes.
+			document.getElementById("tableid").innerHTML+=('<td align=center><a href="javascript:if(vertiedge['+i+']['+j+']<1) reqvertimove('+i+','+j+','+player_number+')"'
+			+' onMouseover="javascript:if (vertiedge['+i+']['+j+']<1) document.ve'+i+j+'.src=flag[player_number]"'
+			+' onMouseout="javascript:if (vertiedge['+i+']['+j+']<1) document.ve'+i+j+'.src=n3.src">'
+			+'<img src="blank.gif" name="ve'+i+j+'" border=0 width=5 height=55></a></td><td align=center><img name="sq'+i+j
+			+'" src="blank.gif" border=0 width=55 height=55></td>');
+		}	
+			//Making the last vertical edge on each row.
+			document.getElementById("tableid").innerHTML+=('<td align=center><a href="javascript:if(vertiedge['+i+']['+j+']<1) reqvertimove('+i+','+j+','+player_number+')"'
+			+' onMouseover="javascript:if (vertiedge['+i+']['+j+']<1) document.ve'+i+j+'.src=flag[player_number]"' +' onMouseout="javascript:if (vertiedge['+i+']['+j+']<1) document.ve'+i+j+'.src=n3.src">'
+			+'<img src="blank.gif" name="ve'+i+j+'" border=0 width=5 height=55></a></td>');
+			document.getElementById("tableid").innerHTML+=('</tr><br><tr>');
+	}
+
+	//Loop to make the last row of dots and edges.
+	for (j=0;j<n;j++) {
+		//Making the last row of alternating dots and edges.
+		document.getElementById("tableid").innerHTML+=('<td align=center><img src="black.gif" border=0 width=5 height=5></td><td align=center><a href="javascript:if(horiedge['+i+']['+j+']<1) reqhorimove('+i+','+j+','+player_number+')"'
+			+' onMouseover="javascript:if (horiedge['+i+']['+j+']<1) document.he'+i+j+'.src=flag[player_number]"'
+			+' onMouseout="javascript:if (horiedge['+i+']['+j+']<1) document.he'+i+j+'.src=n3.src">'
+			+'<img src="blank.gif" name="he'+i+j+'" border=0 width=55 height=5></a></td>');
+	}
+
+	//Ending the HTML table tag.
+	document.getElementById("tableid").innerHTML+=('<td align=center><img src="black.gif" border=0 width=5 height=5></td></tr></table><hr><INPUT TYPE="button" VALUE="Reset" onClick="restart()"></form><button type="button" style="height:100px; width:100px"onclick="startplay()">HIT ME for scores</button><center><div style="float:right"><p id="player"> hello this is player 1</p><p id="score1" style = "display:none">player1 = 0</p><p id="score2" style = "display:none">player2 = 0</p><p id="score3" style = "display:none">player3 = 0</p><p id="score4" style = "display:none">player4 = 0</p>');
+
+}//End of outer for loop of draw().
+
+//The div where all the table HTML gets inserted at the time of the call of draw.
 </script>
-<div style="float:left;width:100px;border-right:1px solid black;height:300px;padding:10px;overflow:scroll-y;">
-  <b>USERS</b>
-  <div id="users"></div>
+<div id= "tableid">
 </div>
-<div style="float:left;width:300px;height:250px;overflow:scroll-y;padding:10px;">
-  <div id="conversation"></div>
-  <input id="data" style="width:200px;" />
-  <input type="button" id="datasend" value="send" />
+
+</body>
+<div id="extradata">
+<p id = "turndata">Turn of player no. </p>
+<p id = "playerno">Player no. </p>
 </div>
+</html>

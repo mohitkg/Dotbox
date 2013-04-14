@@ -1,0 +1,117 @@
+<html>
+ <script src="/socket.io/socket.io.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="nodesocket.js"></script>
+<script>
+
+</script> 
+<script type="text/javascript" src="myfile.js"></script>
+
+
+
+
+<body>
+	<CENTER>
+
+ <script LANGUAGE="JavaScript">
+var m;
+var n;
+var p;
+
+n0 = new Image();
+n1 = new Image();
+n2 = new Image();
+n3 = new Image();
+n4 = new Image();
+n5 = new Image();
+
+n0.src = "red.gif";
+n1.src = "blue.gif";
+n2.src = "black.gif";
+n3.src = "blank.gif";
+n4.src = "green.gif";							//first player red, blue, green, yellow.
+n5.src = "yellow.gif";
+
+var flag = [n0.src,n1.src,n4.src,n5.src];
+var player=0;
+var score=[0,0,0,0];
+var hedge=[];
+var vedge=[];
+var box=[];
+var nn,x,y,zz,count,loop,u,v;
+
+function draw(m_client, n_client, p_client){
+
+//function getInput() {
+/*	do{
+		p=window.prompt("Enter number of players","2");
+	} while (p<2 || p>4);
+	do {
+		m=window.prompt("Enter number of rows between 3 and 9.","4");
+	} while (m<3 || m>9);
+	do {
+		n=window.prompt("Enter number of columns between 3 and 9.","4");
+	} while (n<3 || n>9);*/
+//	p=3;m=4;n=5;
+	m = m_client;
+	n = n_client;
+	p = p_client;
+	for (var i=0;i<=m;i++) {
+		hedge[i]=[];
+		for (var j=0;j<n;j++) hedge[i][j]=0;
+	}
+	for (i=0;i<m;i++) {
+		vedge[i]=[];
+		for (j=0;j<=n;j++) vedge[i][j]=0;
+	}
+	for (i=0;i<m;i++) {
+		box[i]=[];
+		for (j=0;j<n;j++) box[i][j]=0;
+	}
+	nn=2*n+1;
+//}
+//getInput();
+
+
+document.getElementById("cool10").innerHTML='<form name="f"><table bgcolor=#ffffff border="0" cellpadding="0" cellspacing="0"><tr>';
+for (i=0;i<m;i++) {
+	for (j=0;j<n;j++) {
+		document.getElementById("cool10").innerHTML+=('<td align=center><img src="black.gif" border=0 width=5 height=5></td><td align=center><a href="javascript:if(hedge['+i+']['+j+']<1) reqhmove('+i+','+j+','+player_number+')"'+' onMouseover="javascript:if (hedge['+i+']['+j+']<1) document.he'+i+j+'.src=flag[player_number]"'
+		+' onMouseout="javascript:if (hedge['+i+']['+j+']<1) document.he'+i+j+'.src=n3.src">'
+		+'<img src="blank.gif" name="he'+i+j+'" border=0 width=55 height=5></a></td>');
+
+	}
+
+
+	document.getElementById("cool10").innerHTML+='<td align=center><img src="black.gif" width=5 height=5></td>';
+	document.getElementById("cool10").innerHTML+='</tr><br><tr>';
+	for (j=0;j<n;j++) {
+		document.getElementById("cool10").innerHTML+=('<td align=center><a href="javascript:if(vedge['+i+']['+j+']<1) reqvmove('+i+','+j+','+player_number+')"'
+		+' onMouseover="javascript:if (vedge['+i+']['+j+']<1) document.ve'+i+j+'.src=flag[player_number]"'
+		+' onMouseout="javascript:if (vedge['+i+']['+j+']<1) document.ve'+i+j+'.src=n3.src">'
+		+'<img src="blank.gif" name="ve'+i+j+'" border=0 width=5 height=55></a></td><td align=center><img name="sq'+i+j
+		+'" src="blank.gif" border=0 width=55 height=55></td>');
+	}	
+		document.getElementById("cool10").innerHTML+=('<td align=center><a href="javascript:if(vedge['+i+']['+j+']<1) reqvmove('+i+','+j+','+player_number+')"'
+		+' onMouseover="javascript:if (vedge['+i+']['+j+']<1) document.ve'+i+j+'.src=flag[player_number]"' +' onMouseout="javascript:if (vedge['+i+']['+j+']<1) document.ve'+i+j+'.src=n3.src">'
+		+'<img src="blank.gif" name="ve'+i+j+'" border=0 width=5 height=55></a></td>');
+		document.getElementById("cool10").innerHTML+=('</tr><br><tr>');
+}
+for (j=0;j<n;j++) {
+	document.getElementById("cool10").innerHTML+=('<td align=center><img src="black.gif" border=0 width=5 height=5></td><td align=center><a href="javascript:if(hedge['+i+']['+j+']<1) reqhmove('+i+','+j+','+player_number+')"'
+		+' onMouseover="javascript:if (hedge['+i+']['+j+']<1) document.he'+i+j+'.src=flag[player_number]"'
+		+' onMouseout="javascript:if (hedge['+i+']['+j+']<1) document.he'+i+j+'.src=n3.src">'
+		+'<img src="blank.gif" name="he'+i+j+'" border=0 width=55 height=5></a></td>');
+}
+
+document.getElementById("cool10").innerHTML+=('<td align=center><img src="black.gif" border=0 width=5 height=5></td></tr></table><hr><INPUT TYPE="button" VALUE="Reset" onClick="restart()"></form><button type="button" style="height:100px; width:100px"onclick="startplay()">HIT ME for scores</button><center><div style="float:right"><p id="player"> hello this is player 1</p><p id="score1" style = "display:none">player1 = 0</p><p id="score2" style = "display:none">player2 = 0</p><p id="score3" style = "display:none">player3 = 0</p><p id="score4" style = "display:none">player4 = 0</p>');
+}
+</script>
+<div id= "cool10">
+</div>
+
+</body>
+<p id = "turndata">Turn of player no. </p>
+<p id = "playerno">Player no. </p>
+</html>
+
